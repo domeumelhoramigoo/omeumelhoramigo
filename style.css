@@ -395,3 +395,30 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .theme-ev .btn-navy { background: var(--ink); }
 .theme-ev .btn-navy:hover { background: #333; }
 .theme-ev .btn-teal:hover { background: #00a7b0; }
+
+/* ---------- Páginas legais, caixa de aceitação e faixa de cookies ---------- */
+.prose { max-width: 46rem; }
+.prose h2 { font-size: 1.35rem; font-weight: 800; margin: 2.2rem 0 0.5rem; max-width: none; }
+.prose h2:first-child { margin-top: 0; }
+.prose p, .prose li { max-width: none; }
+.prose a { text-underline-offset: 3px; color: var(--teal-deep); font-weight: 600; }
+.check { display: flex; gap: 0.7rem; align-items: flex-start; }
+.check input { width: 1.3rem; height: 1.3rem; margin-top: 0.15rem; flex: none; accent-color: var(--teal-deep); }
+.check label { font-size: 0.95rem; }
+.check a { color: var(--teal-deep); font-weight: 600; text-underline-offset: 3px; }
+.site-footer .link-btn { color: #d6dde1; font-size: inherit; }
+.cookie-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--white); color: var(--ink);
+  border-top: 4px solid var(--teal); box-shadow: 0 -10px 30px rgba(0, 20, 40, 0.25);
+}
+.cookie-in { width: min(var(--wrap), 100% - 2.5rem); margin: 0 auto; padding: 1.2rem 0 1.4rem; }
+.cookie-in h2 { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
+.cookie-in p { margin: 0.4rem 0 0.9rem; font-size: 0.95rem; max-width: 60ch; }
+.cookie-in a { color: var(--teal-deep); font-weight: 600; }
+.ck-btns { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+.ck-op { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 1rem; font-weight: 600; }
+.table-wrap { overflow-x: auto; margin: 1rem 0 1.4rem; }
+.entities { border-collapse: collapse; width: 100%; min-width: 660px; font-size: 0.95rem; }
+.entities th, .entities td { text-align: left; vertical-align: top; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--line); }
+.entities th { background: var(--mist); color: var(--navy); font-weight: 800; }
+button.btn { font-family: inherit; font-size: 0.98rem; font-weight: 700; }

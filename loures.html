@@ -118,6 +118,7 @@
               <select id="periodo" name="periodo"><option>De manhã (9h30–13h)</option><option>À tarde (15h–19h30)</option><option>Tanto faz</option></select></div>
           </div>
           <div class="field"><label for="obs">Alguma nota? (opcional)</label><textarea id="obs" name="obs" rows="3"></textarea></div>
+          <div class="check"><input id="rgpd" name="rgpd" type="checkbox" required><label for="rgpd">Li e aceito a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</label></div>
           <p class="form-error" id="erro" role="alert" hidden></p>
           <button class="btn btn-navy" type="submit">Preparar o pedido</button>
         </form>
@@ -165,6 +166,7 @@
       <div>
         <img src="logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
         <p>O cuidado e saber de quem também os ama.</p>
+        <p><a href="https://www.instagram.com/omedicoveterinario/" target="_blank" rel="noopener">Instagram @omedicoveterinario</a></p>
       </div>
       <div>
         <h3>Pinhal Novo</h3>
@@ -189,11 +191,12 @@
     </div>
     <div class="legal">
       <p>© <span id="ano">2026</span> Grupo do meu melhor amigo</p>
-      <p><a href="consultorios.html">Consultórios</a> · <a href="sobre.html#trabalhe-connosco">Trabalhe connosco</a> · <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></p>
+      <p><a href="consultorios.html">Consultórios</a> · <a href="sobre.html#trabalhe-connosco">Trabalhe connosco</a> · <a href="privacidade.html">Privacidade</a> · <a href="cookies.html">Cookies</a><span id="cookies-set" hidden> · <button class="link-btn on-dark" type="button" id="abrir-cookies">Definições de cookies</button></span> · <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></p>
     </div>
   </div>
 </footer>
 
+<script src="consentimento.js" defer></script>
 <script>
   document.getElementById("ano").textContent = new Date().getFullYear();
   (function () {
@@ -233,6 +236,7 @@
       if (f.get("tel").replace(/\D/g, "").length < 9) return falha("Escreva um telemóvel com 9 números.", document.getElementById("tel"));
       if (!f.get("animal")) return falha("Escreva o nome do animal.", document.getElementById("animal"));
       if (!f.get("dia")) return falha("Escolha o dia preferido.", dia);
+      if (!document.getElementById("rgpd").checked) return falha("Para preparar o pedido, aceite a Política de Privacidade.", document.getElementById("rgpd"));
       var d = new Date(f.get("dia") + "T12:00:00");
       if (d.getDay() === 0) return falha("O consultório está encerrado ao domingo. Escolha outro dia.", dia);
 

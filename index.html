@@ -25,7 +25,8 @@
       "@id": "https://domeumelhoramigo.com/#grupo",
       "name": "Grupo do meu melhor amigo",
       "url": "https://domeumelhoramigo.com/",
-      "logo": "https://domeumelhoramigo.com/logo-claro.png"
+      "logo": "https://domeumelhoramigo.com/logo-claro.png",
+      "sameAs": ["https://www.instagram.com/omedicoveterinario/"]
     },
     {
       "@type": "VeterinaryCare",
@@ -181,6 +182,7 @@
       <div>
         <img src="logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
         <p>O cuidado e saber de quem também os ama.</p>
+        <p><a href="https://www.instagram.com/omedicoveterinario/" target="_blank" rel="noopener">Instagram @omedicoveterinario</a></p>
       </div>
       <div>
         <h3>Pinhal Novo</h3>
@@ -205,11 +207,12 @@
     </div>
     <div class="legal">
       <p>© <span id="ano">2026</span> Grupo do meu melhor amigo</p>
-      <p><a href="consultorios.html">Consultórios</a> · <a href="sobre.html#trabalhe-connosco">Trabalhe connosco</a> · <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></p>
+      <p><a href="consultorios.html">Consultórios</a> · <a href="sobre.html#trabalhe-connosco">Trabalhe connosco</a> · <a href="privacidade.html">Privacidade</a> · <a href="cookies.html">Cookies</a><span id="cookies-set" hidden> · <button class="link-btn on-dark" type="button" id="abrir-cookies">Definições de cookies</button></span> · <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></p>
     </div>
   </div>
 </footer>
 
+<script src="consentimento.js" defer></script>
 <script>
   document.getElementById("ano").textContent = new Date().getFullYear();
   (function () {

@@ -16,6 +16,12 @@ Unidades: Pinhal Novo (Setúbal), Linda-a-Velha e Loures (Lisboa).
 Serviço especializado: ExoticVets (exóticos e domicílio), página exoticvets.html, junto ao consultório de Loures.
 Quando abrir outra unidade, pedir a atualização: entra no menu, nos mosaicos "Onde estamos" (com a contagem por localidade), no filtro e nos cartões da página de consultórios, e no rodapé.
 
+Privacidade e cookies (Google Analytics)
+  privacidade.html e cookies.html (ligadas no rodapé). Os formulários de marcação têm uma caixa obrigatória "Li e aceito a Política de Privacidade".
+  Faixa de cookies (consentimento.js): o Google Analytics só carrega depois de a pessoa aceitar. Falta pôr o ID de medição do Google Analytics 4 deste site, trocando "G-XXXXXXXXXX" no início de consentimento.js. Enquanto for o de exemplo, a faixa não aparece.
+  No Google Analytics: criar uma propriedade GA4 só para este site, pôr o período de conservação de dados em 14 meses e desligar os sinais do Google.
+  ANTES DE PUBLICAR: preencher em privacidade.html a tabela a amarelo (entidade, NIF, morada e e-mail de privacidade de cada consultório e do site) e pedir a revisão de quem trata da parte jurídica/RGPD.
+
 Por confirmar antes de publicar
   1. Horários de Pinhal Novo e de Loures: copiados do Google em 21/09/2026; confirmar que estão certos
   2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de sobre.html (enquanto vazio, o botão fica escondido)
