@@ -1,0 +1,18 @@
+SITE DO GRUPO DO MEU MELHOR AMIGO - primeira versão
+
+Ficheiros
+  index.html            página inicial do Grupo
+  pinhal-novo/index.html  página da clínica de Pinhal Novo
+  style.css             estilos (cores e tipografia do manual de marca)
+  assets/               logótipos (extraídos do manual da Sintonia Digital), favicon e imagem de partilha
+
+Por confirmar antes de publicar (procurar "horário a confirmar" e o script no fim de index.html)
+  1. Horário da clínica de Pinhal Novo (aparece em index.html e pinhal-novo/index.html)
+  2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de index.html (enquanto vazio, o botão fica escondido)
+  3. Salas de recobro para cães: vem de uma notícia de 2019, confirmar se ainda existe
+  4. Texto "sob a gestão do médico veterinário Miguel Pinto" e "abriu a 1 de novembro de 2016": vêm de artigos públicos
+  5. Endereço das páginas (domeumelhoramigo.com) nas etiquetas de partilha e nos dados estruturados: ajustar se o site ficar noutro endereço
+
+Publicação
+  São ficheiros estáticos: basta enviar o conteúdo desta pasta para a raiz do alojamento do domínio.
+  Não mexer nos registos de correio (MX) do domínio.
