@@ -286,7 +286,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .stat-n { font-size: 2.6rem; font-weight: 800; color: var(--navy); line-height: 1; min-width: 4.2rem; }
 .stat-l { color: #3a4a54; }
 .hero-page .hero-inner { padding-block: clamp(3rem, 7vw, 5rem); }
-.foot { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important; }
+.foot { grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)) !important; gap: 2rem 2rem; }
 .unit .facts div { grid-template-columns: 1fr; gap: 0.1rem; }
 @media (max-width: 520px) {
   .brand img { height: 32px; }
@@ -338,3 +338,29 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .avatar { width: 5.5rem; height: 5.5rem; border-radius: 50%; background: var(--navy); color: #7fd6db; display: grid; place-items: center; font-weight: 800; font-size: 1.6rem; margin-bottom: 1rem; }
 .person h3 { font-size: 1.25rem; font-weight: 800; color: var(--navy); }
 .person p { margin: 0.3rem 0 0; color: #3a4a54; }
+
+/* ---------- ExoticVets ---------- */
+.special {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 1.8rem; margin-top: 2rem;
+  padding: 1.4rem 1.8rem; background: var(--white); border: 2px solid var(--teal); border-radius: var(--radius-lg);
+}
+.special img { width: 72px; height: auto; }
+.special p { margin: 0; flex: 1 1 18rem; max-width: none; }
+.ev-card {
+  display: flex; flex-wrap: wrap; gap: 1.6rem 2.2rem; margin-top: 2rem; align-items: flex-start;
+  padding: clamp(1.6rem, 3vw, 2.4rem); border: 2px solid var(--teal); border-radius: var(--radius-lg); background: var(--white);
+}
+.ev-mark { width: 96px; height: auto; flex: none; }
+.ev-card > div { flex: 1 1 20rem; }
+.ev-card h3 { font-size: 1.6rem; font-weight: 800; color: var(--navy); }
+.ev-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0 1rem; padding: 0; }
+.ev-tags span { background: var(--teal-deep); color: var(--white); font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.8rem; border-radius: 999px; }
+.ev-hero-logo { width: 84px; height: auto; margin: 0 0 1.2rem; }
+.chips { list-style: none; margin: 1.8rem 0 1.4rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.chips li { padding: 0.6rem 1.3rem; border-radius: 999px; background: var(--navy); color: var(--white); font-weight: 700; }
+.two { display: grid; gap: 1.4rem; margin-top: 2rem; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .two { grid-template-columns: 1fr 1fr; } }
+.mini { background: var(--white); border-radius: var(--radius-lg); padding: 1.8rem; border: 2px solid var(--navy); }
+.mini h3 { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+.mini p { margin: 0 0 0.6em; }
+.mini a { font-weight: 600; text-underline-offset: 3px; }

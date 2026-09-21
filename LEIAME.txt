@@ -11,6 +11,7 @@ Enviar todos os ficheiros para a raiz do repositório. Não é preciso criar pas
 Menu com abas: Sobre (Quem somos, Missão e valores, Trabalhe connosco), Consultórios (todos e cada unidade) e Contactos (rodapé).
 
 Unidades: Pinhal Novo (Setúbal), Linda-a-Velha e Loures (Lisboa).
+Serviço especializado: ExoticVets (exóticos e domicílio), página exoticvets.html, junto ao consultório de Loures.
 Quando abrir outra unidade, pedir a atualização: entra no menu, nos mosaicos "Onde estamos" (com a contagem por localidade), no filtro e nos cartões da página de consultórios, e no rodapé.
 
 Por confirmar antes de publicar
@@ -21,6 +22,7 @@ Por confirmar antes de publicar
   3. Texto de "Missão e valores" (sobre.html): proposta minha, para aprovar
   4. Salas de recobro para cães (pinhal-novo.html; vem de uma notícia de 2019)
   5. Texto sobre Miguel Pinto e abertura em 2016 (vem de artigos públicos)
+  5b. ExoticVets (exoticvets.html): confirmar zona das visitas ao domicílio, horário e se há e-mail/site. O 915 219 833 é o WhatsApp empresarial; confirmar que também atende chamadas.
   6. Endereço domeumelhoramigo.com nas etiquetas de partilha, se o site ficar noutro endereço
 
 Notas
