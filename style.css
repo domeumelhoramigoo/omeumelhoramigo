@@ -364,3 +364,34 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .mini h3 { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
 .mini p { margin: 0 0 0.6em; }
 .mini a { font-weight: 600; text-underline-offset: 3px; }
+
+/* ---------- ExoticVets: cores do Instagram (turquesa, carvão e creme) ---------- */
+.theme-ev { --navy: #1a1a1a; --mist: #f8efdf; --line: #e6d8bd; }
+.theme-ev .site-header { background: #1a1a1a; }
+.theme-ev .hero::after {
+  background: url("exoticvets-logo-branco.png") center / contain no-repeat;
+  right: -3%; bottom: -34%; width: min(52vw, 520px); opacity: 0.06;
+}
+.theme-ev .hero::before {
+  content: ""; position: absolute; left: -6%; bottom: -30%; width: 46vw; max-width: 520px; aspect-ratio: 1.25;
+  background: rgba(0, 148, 156, 0.2); border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; transform: rotate(-14deg); pointer-events: none;
+}
+.theme-ev .hero-inner::before {
+  content: ""; position: absolute; right: 12%; top: 6%; width: 190px; height: 140px;
+  background: rgba(255, 255, 255, 0.05); border-radius: 48% 52% 41% 59% / 56% 40% 60% 44%; transform: rotate(24deg); pointer-events: none; z-index: -1;
+}
+.brush {
+  color: var(--white); padding: 0 0.32em; margin: 0 -0.12em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 60' preserveAspectRatio='none'%3E%3Cpath fill='%2300949c' d='M4 12C40 3 120 9 200 6c50-2 88 4 96 10 4 14-4 30 0 36-56 6-136 2-206 4-40 1-70-2-84-6C-2 38 8 26 4 12Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.theme-ev .section h2 { color: var(--navy); }
+.theme-ev .chips li { background: var(--teal-deep); }
+.section.teal { background: var(--teal); color: #fff; }
+.section.teal h2 { color: #fff; }
+.theme-ev .mini { background: var(--mist); border-color: transparent; color: var(--ink); }
+.theme-ev .mini h3 { color: var(--ink); }
+.theme-ev .mini a { color: var(--ink); }
+.theme-ev .btn-navy { background: var(--ink); }
+.theme-ev .btn-navy:hover { background: #333; }
+.theme-ev .btn-teal:hover { background: #00a7b0; }
