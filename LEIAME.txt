@@ -11,3 +11,7 @@ Por confirmar antes de publicar
   3. Salas de recobro para cães (vem de uma notícia de 2019)
   4. Texto sobre Miguel Pinto e abertura em 2016 (vem de artigos públicos)
   5. Endereço domeumelhoramigo.com nas etiquetas de partilha, se o site ficar noutro endereço
+
+Notas
+  - A fonte Montserrat está dentro do site (montserrat-latin-wght-normal.woff2); já não se pede nada aos servidores da Google. Licença: Montserrat-LICENCA-OFL.txt (manter no site).
+  - Faixa de campanha no topo de index.html: texto de exemplo, editar ou apagar o bloco marcado com "FAIXA DE CAMPANHA".

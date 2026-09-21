@@ -1,6 +1,15 @@
 /* Grupo do meu melhor amigo — site institucional
    Identidade: manual de marca (Sintonia Digital). Cores e tipografia do manual. */
 
+/* Montserrat (fonte do manual de marca), alojada no próprio site. Licença SIL OFL em Montserrat-LICENCA-OFL.txt */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("montserrat-latin-wght-normal.woff2") format("woff2");
+}
+
 :root {
   --navy: #002845;
   --teal: #00949c;
@@ -184,3 +193,13 @@ p { margin: 0 0 1em; max-width: 62ch; }
   .clinics-row { grid-template-columns: 1fr 1fr; }
   .clinics-row .clinic { grid-template-columns: 1fr; align-items: start; }
 }
+
+/* ---------- Faixa de campanha ---------- */
+.campaign { background: var(--teal); color: var(--ink); }
+.campaign .wrap {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 0.2rem 1.2rem; padding-block: 0.7rem; text-align: center; font-size: 0.95rem;
+}
+.campaign p { margin: 0; max-width: none; font-weight: 600; }
+.campaign a { font-weight: 700; text-underline-offset: 3px; }
+.campaign a:hover { text-decoration-thickness: 2px; }
