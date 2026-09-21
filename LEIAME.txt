@@ -1,10 +1,12 @@
 SITE DO GRUPO DO MEU MELHOR AMIGO - versão com todos os ficheiros na mesma pasta
 
-Ficheiros: index.html (Grupo), pinhal-novo.html (clínica de Pinhal Novo), style.css e as imagens.
+Ficheiros: index.html (Grupo), pinhal-novo.html (consultório de Pinhal Novo), style.css e as imagens.
 Enviar todos para a raiz do repositório. Não é preciso criar pastas.
 
+Unidades no site: Pinhal Novo, Linda-a-Velha e Loures.
+
 Por confirmar antes de publicar
-  1. Horário de Pinhal Novo (procurar "horário a confirmar" nos dois .html)
+  1. Horário de Pinhal Novo e de Loures (procurar "horário a confirmar" nos dois .html)
   2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de index.html
   3. Salas de recobro para cães (vem de uma notícia de 2019)
   4. Texto sobre Miguel Pinto e abertura em 2016 (vem de artigos públicos)
