@@ -6,7 +6,7 @@ Enviar todos para a raiz do repositório. Não é preciso criar pastas.
 Unidades no site: Pinhal Novo, Linda-a-Velha e Loures.
 
 Por confirmar antes de publicar
-  1. Horário de Pinhal Novo e de Loures (procurar "horário a confirmar" nos dois .html)
+  1. Horários de Pinhal Novo e de Loures: copiados do Google em 21/09/2026; confirmar que estão certos
   2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de index.html
   3. Salas de recobro para cães (vem de uma notícia de 2019)
   4. Texto sobre Miguel Pinto e abertura em 2016 (vem de artigos públicos)
