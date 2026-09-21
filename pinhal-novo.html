@@ -73,15 +73,16 @@
       <h1>O Médico Veterinário do Meu Melhor Amigo, em Pinhal Novo</h1>
       <p class="lead">Abrimos a 1 de novembro de 2016 e queremos ser o veterinário de família do seu animal: perto, informal e sempre disponível para uma dúvida.</p>
       <div class="btn-row">
-        <a class="btn btn-teal" href="tel:+351212362002">Ligar 212 362 002</a>
+        <a class="btn btn-teal" href="#marcacao">Pedir marcação</a>
+        <a class="btn btn-line" href="tel:+351212362002">Ligar 212 362 002</a>
         <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+dos+Ferrovi%C3%A1rios+103+Pinhal+Novo" target="_blank" rel="noopener">Como chegar</a>
       </div>
     </div>
   </section>
 
-  <section class="section on-light">
+  <section class="section on-light" id="instalacoes">
     <div class="wrap">
-      <h2>Instalações para cuidar de perto</h2>
+      <h2>Serviços e instalações para cuidar de perto</h2>
       <ul class="rooms">
         <li>
           <h3>Salas de consulta</h3>
@@ -119,7 +120,67 @@
     </div>
   </section>
 
-  <section class="section tint on-light">
+  <section class="section tint on-light" id="marcacao">
+    <div class="wrap booking">
+      <div>
+        <h2>Pedir marcação</h2>
+        <p class="clinics-intro">Diga-nos o que lhe dá jeito e nós respondemos para confirmar o dia e a hora.</p>
+        <p class="note">A marcação só fica confirmada quando o consultório lhe responder. Os dados que escreve aqui não ficam guardados no site: servem apenas para preparar a mensagem que envia ao consultório.</p>
+        <p class="note">Horário: segunda a sexta, 10h–13h e 15h–20h; sábado, 10h–13h; domingo, encerrado.</p>
+      </div>
+      <div>
+        <form id="form-marcacao" class="form" novalidate>
+          <div class="field"><label for="nome">O seu nome</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="tel">Telemóvel</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field-row">
+            <div class="field"><label for="animal">Nome do animal</label><input id="animal" name="animal" type="text" required></div>
+            <div class="field"><label for="especie">Espécie</label>
+              <select id="especie" name="especie"><option>Cão</option><option>Gato</option><option>Outro</option></select></div>
+          </div>
+          <div class="field"><label for="motivo">Motivo</label>
+            <select id="motivo" name="motivo">
+              <option>Consulta</option><option>Vacinação</option><option>Desparasitação</option>
+              <option>Análises ou exames</option><option>Cirurgia</option><option>Outro motivo</option>
+            </select></div>
+          <div class="field-row">
+            <div class="field"><label for="dia">Dia preferido</label><input id="dia" name="dia" type="date" required></div>
+            <div class="field"><label for="periodo">Período</label>
+              <select id="periodo" name="periodo"><option>De manhã (10h–13h)</option><option>À tarde (15h–20h)</option><option>Tanto faz</option></select></div>
+          </div>
+          <div class="field"><label for="obs">Alguma nota? (opcional)</label><textarea id="obs" name="obs" rows="3"></textarea></div>
+          <p class="form-error" id="erro" role="alert" hidden></p>
+          <button class="btn btn-navy" type="submit">Preparar o pedido</button>
+        </form>
+        <div class="pedido" id="pedido" hidden>
+          <h3>O seu pedido está pronto</h3>
+          <pre id="pedido-txt"></pre>
+          <div class="btn-row">
+            <a class="btn btn-navy" id="via-wa" href="#" target="_blank" rel="noopener" hidden>Enviar por WhatsApp</a>
+            <a class="btn btn-navy" id="via-mail" href="#" hidden>Enviar por e-mail</a>
+            <button class="btn btn-line" type="button" id="copiar">Copiar o texto</button>
+            <a class="btn btn-line" href="tel:+351212362002">Ligar 212 362 002</a>
+          </div>
+          <p class="note" id="pedido-nota">Envie este texto ao consultório ou ligue para confirmar. Só fica marcado quando lhe responderem.</p>
+          <button class="link-btn" type="button" id="editar">Voltar e alterar o pedido</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section on-light" id="equipa">
+    <div class="wrap">
+      <h2>A equipa</h2>
+      <div class="team">
+        <article class="person">
+          <div class="avatar" aria-hidden="true">MP</div>
+          <h3>Miguel Pinto</h3>
+          <p>Médico Veterinário. Gere o consultório desde a abertura, em 2016.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint on-light" id="onde">
     <div class="wrap find">
       <div>
         <h2>Como nos encontrar</h2>
@@ -131,7 +192,7 @@
         </dl>
       </div>
       <div>
-        <p>O consultório é gerido desde a abertura pelo médico veterinário Miguel Pinto e faz parte do Grupo do meu melhor amigo, juntamente com o Centro Veterinário Linda-a-Velha e o Consultório Veterinário de Loures.</p>
+        <p>O consultório faz parte do Grupo do meu melhor amigo, juntamente com o Centro Veterinário Linda-a-Velha e o Consultório Veterinário de Loures.</p>
         <div class="btn-row">
           <a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+dos+Ferrovi%C3%A1rios+103+Pinhal+Novo" target="_blank" rel="noopener">Abrir no Google Maps</a>
           <a class="btn btn-line" href="consultorios.html">Ver todos os consultórios</a>
@@ -185,6 +246,62 @@
       if (e.target.tagName === "A" && nav.classList.contains("open")) {
         nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false");
       }
+    });
+  })();
+  // Canais para receber os pedidos de marcação. Enquanto estiverem vazios, o utilizador copia o texto ou liga.
+  //   WHATSAPP_PN: número com indicativo e sem espaços, por exemplo "351912345678"
+  //   EMAIL_PN: e-mail do consultório
+  var WHATSAPP_PN = "";
+  var EMAIL_PN = "";
+  (function () {
+    var form = document.getElementById("form-marcacao");
+    if (!form) return;
+    var dia = document.getElementById("dia"), erro = document.getElementById("erro");
+    var pedido = document.getElementById("pedido"), txt = document.getElementById("pedido-txt");
+    var hoje = new Date(); hoje.setMinutes(hoje.getMinutes() - hoje.getTimezoneOffset());
+    dia.min = hoje.toISOString().slice(0, 10);
+
+    function fmt(v) { var p = v.split("-"); return p[2] + "/" + p[1] + "/" + p[0]; }
+    function falha(m, campo) { erro.textContent = m; erro.hidden = false; if (campo) campo.focus(); }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); erro.hidden = true;
+      var f = new FormData(form);
+      ["nome", "tel", "animal", "dia"].forEach(function (k) { f.set(k, (f.get(k) || "").trim()); });
+      if (!f.get("nome")) return falha("Escreva o seu nome.", document.getElementById("nome"));
+      if (f.get("tel").replace(/\D/g, "").length < 9) return falha("Escreva um telemóvel com 9 números.", document.getElementById("tel"));
+      if (!f.get("animal")) return falha("Escreva o nome do animal.", document.getElementById("animal"));
+      if (!f.get("dia")) return falha("Escolha o dia preferido.", dia);
+      var d = new Date(f.get("dia") + "T12:00:00");
+      if (d.getDay() === 0) return falha("O consultório está encerrado ao domingo. Escolha outro dia.", dia);
+      if (d.getDay() === 6 && f.get("periodo").indexOf("tarde") > -1) return falha("Ao sábado só abrimos de manhã (10h–13h).", document.getElementById("periodo"));
+
+      var linhas = [
+        "Olá! Gostava de pedir uma marcação no consultório de Pinhal Novo.", "",
+        "Nome: " + f.get("nome"),
+        "Telemóvel: " + f.get("tel"),
+        "Animal: " + f.get("animal") + " (" + f.get("especie") + ")",
+        "Motivo: " + f.get("motivo"),
+        "Dia preferido: " + fmt(f.get("dia")) + ", " + f.get("periodo")
+      ];
+      if ((f.get("obs") || "").trim()) linhas.push("Nota: " + f.get("obs").trim());
+      var msg = linhas.join("\n");
+      txt.textContent = msg;
+
+      var wa = document.getElementById("via-wa"), ml = document.getElementById("via-mail");
+      if (WHATSAPP_PN) { wa.href = "https://wa.me/" + WHATSAPP_PN + "?text=" + encodeURIComponent(msg); wa.hidden = false; }
+      if (EMAIL_PN) { ml.href = "mailto:" + EMAIL_PN + "?subject=" + encodeURIComponent("Pedido de marcação") + "&body=" + encodeURIComponent(msg); ml.hidden = false; }
+      if (WHATSAPP_PN || EMAIL_PN) document.getElementById("pedido-nota").textContent = "Só fica marcado quando o consultório lhe responder.";
+
+      form.hidden = true; pedido.hidden = false; pedido.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    document.getElementById("editar").addEventListener("click", function () { pedido.hidden = true; form.hidden = false; });
+    document.getElementById("copiar").addEventListener("click", function () {
+      var b = this, t = txt.textContent;
+      function ok() { b.textContent = "Texto copiado"; setTimeout(function () { b.textContent = "Copiar o texto"; }, 2200); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, ok);
+      else { var r = document.createRange(); r.selectNodeContents(txt); var s = getSelection(); s.removeAllRanges(); s.addRange(r); try { document.execCommand("copy"); } catch (x) {} ok(); }
     });
   })();
 </script>

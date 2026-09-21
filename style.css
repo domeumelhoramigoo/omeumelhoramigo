@@ -308,3 +308,33 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .quick-more { margin: 1.2rem 0 0; max-width: none; }
 .quick-more a { font-weight: 600; text-underline-offset: 3px; }
 @media (max-width: 520px) { .quick { flex: 1 1 100%; flex-direction: row; justify-content: space-between; align-items: center; } }
+
+/* ---------- Página do consultório: título mais pequeno, marcação e equipa ---------- */
+.hero-page h1 { font-size: clamp(1.9rem, 3.8vw, 3rem); max-width: 24ch; }
+.hero-page .btn-row { margin-top: 1.6rem; }
+.booking { display: grid; gap: 2.4rem 4rem; }
+@media (min-width: 900px) { .booking { grid-template-columns: 0.9fr 1.1fr; align-items: start; } }
+.note { font-size: 0.95rem; color: #3a4a54; }
+.form { display: grid; gap: 1.1rem; background: var(--white); padding: clamp(1.4rem, 3vw, 2.2rem); border-radius: var(--radius-lg); border: 2px solid var(--navy); }
+.form[hidden], .pedido[hidden] { display: none; }
+.field { display: grid; gap: 0.35rem; }
+.field-row { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .field-row { grid-template-columns: 1fr 1fr; } }
+.field label { font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+.field input, .field select, .field textarea {
+  font: inherit; color: var(--ink); background: var(--white);
+  border: 2px solid var(--line); border-radius: 10px; padding: 0.7rem 0.85rem; width: 100%;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--teal); outline: none; box-shadow: 0 0 0 3px rgba(0, 148, 156, 0.25); }
+.form-error { margin: 0; padding: 0.7rem 0.9rem; border-radius: 10px; background: #fde8e8; color: #7a1414; font-weight: 600; max-width: none; }
+.form .btn { justify-self: start; }
+.pedido { background: var(--white); padding: clamp(1.4rem, 3vw, 2.2rem); border-radius: var(--radius-lg); border: 2px solid var(--teal); }
+.pedido h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy); }
+.pedido pre { margin: 1rem 0 0; padding: 1rem; background: var(--mist); border-radius: 12px; white-space: pre-wrap; font: inherit; font-size: 0.98rem; line-height: 1.55; }
+.pedido .note { margin-top: 1rem; }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--teal-deep); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.team { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-top: 2.2rem; }
+.person { max-width: 22rem; }
+.avatar { width: 5.5rem; height: 5.5rem; border-radius: 50%; background: var(--navy); color: #7fd6db; display: grid; place-items: center; font-weight: 800; font-size: 1.6rem; margin-bottom: 1rem; }
+.person h3 { font-size: 1.25rem; font-weight: 800; color: var(--navy); }
+.person p { margin: 0.3rem 0 0; color: #3a4a54; }
