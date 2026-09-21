@@ -4,7 +4,9 @@ Páginas
   index.html         página inicial (topo, "Um veterinário de família", mosaicos "Onde estamos")
   sobre.html         Quem somos, Missão e valores, Trabalhe connosco
   consultorios.html  todos os consultórios, com filtro por localidade
-  pinhal-novo.html   página do consultório de Pinhal Novo
+  pinhal-novo.html   página do consultório de Pinhal Novo (com pedido de marcação)
+  loures.html        página do consultório de Loures (com pedido de marcação)
+  exoticvets.html    página da ExoticVets (só WhatsApp e telefone)
   style.css, imagens e a fonte Montserrat (montserrat-latin-wght-normal.woff2)
 Enviar todos os ficheiros para a raiz do repositório. Não é preciso criar pastas.
 
@@ -17,7 +19,8 @@ Quando abrir outra unidade, pedir a atualização: entra no menu, nos mosaicos "
 Por confirmar antes de publicar
   1. Horários de Pinhal Novo e de Loures: copiados do Google em 21/09/2026; confirmar que estão certos
   2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de sobre.html (enquanto vazio, o botão fica escondido)
-  2b. Pedido de marcação (pinhal-novo.html): preencher WHATSAPP_PN (ex.: "351912345678") e/ou EMAIL_PN no fim do ficheiro. Enquanto vazios, a pessoa copia o texto ou liga.
+  2b. Pedido de marcação: em pinhal-novo.html o e-mail já está ligado; falta WHATSAPP_PN. Em loures.html preencher WHATSAPP_LO (ex.: "351912345678") e/ou EMAIL_LO no fim do ficheiro. Enquanto vazios, a pessoa copia o texto ou liga.
+  2d. Loures: a página não tem lista de serviços nem equipa (não tenho essa informação). Acrescentar quando houver.
   2c. Equipa (pinhal-novo.html): só tem o Miguel Pinto, com iniciais em vez de foto. Acrescentar as outras pessoas e as fotos.
   3. Texto de "Missão e valores" (sobre.html): proposta minha, para aprovar
   4. Salas de recobro para cães (pinhal-novo.html; vem de uma notícia de 2019)
