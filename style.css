@@ -292,3 +292,19 @@ p { margin: 0 0 1em; max-width: 62ch; }
   .brand img { height: 32px; }
   .site-header .wrap { gap: 0.6rem 1rem; }
 }
+
+/* ---------- Entrada: ligar ao consultório ---------- */
+.quick-label { margin: 2.2rem 0 0.8rem; font-weight: 700; color: #7fd6db; }
+.quick-row { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.quick {
+  display: flex; flex-direction: column; gap: 0.1rem; min-width: 11.5rem;
+  padding: 0.85rem 1.3rem; border-radius: var(--radius-md); text-decoration: none;
+  background: rgba(255, 255, 255, 0.09); border: 2px solid rgba(255, 255, 255, 0.28);
+  transition: background-color .15s, border-color .15s;
+}
+.quick:hover { background: rgba(255, 255, 255, 0.17); border-color: var(--white); }
+.quick-n { font-weight: 700; font-size: 0.95rem; }
+.quick-t { font-weight: 800; font-size: 1.25rem; color: #7fd6db; letter-spacing: 0.01em; }
+.quick-more { margin: 1.2rem 0 0; max-width: none; }
+.quick-more a { font-weight: 600; text-underline-offset: 3px; }
+@media (max-width: 520px) { .quick { flex: 1 1 100%; flex-direction: row; justify-content: space-between; align-items: center; } }
