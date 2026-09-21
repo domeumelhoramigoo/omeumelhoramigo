@@ -74,24 +74,39 @@
 </head>
 <body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
-
 <!-- FAIXA DE CAMPANHA: texto de exemplo. Para mudar, editar a frase; para tirar, apagar este bloco todo. -->
 <div class="campaign" role="region" aria-label="Aviso">
   <div class="wrap">
     <p>No outono, as pulgas e as carraças continuam ativas. Fale com o seu consultório sobre a desparasitação.</p>
-    <a href="#clinicas">Ver consultórios</a>
+    <a href="consultorios.html">Ver consultórios</a>
   </div>
 </div>
 
 <header class="site-header on-navy">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="Grupo do meu melhor amigo, página inicial">
+    <a class="brand" href="index.html" aria-label="Grupo do meu melhor amigo, página inicial">
       <img src="logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
     </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#quem-somos">Quem somos</a>
-      <a href="#clinicas">Consultórios</a>
-      <a href="#trabalhe-connosco">Trabalhe connosco</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul class="menu">
+        <li class="has-sub">
+          <a href="sobre.html">Sobre</a>
+          <ul class="submenu">
+            <li><a href="sobre.html#quem-somos">Quem somos</a></li>
+            <li><a href="sobre.html#missao">Missão e valores</a></li>
+            <li><a href="sobre.html#trabalhe-connosco">Trabalhe connosco</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="consultorios.html">Consultórios</a>
+          <ul class="submenu">
+            <li><a href="consultorios.html">Todos os consultórios</a></li>
+            <li><a href="pinhal-novo.html">Pinhal Novo</a></li><li><a href="https://centroveterinariolindaavelha.pt" target="_blank" rel="noopener"><span class="nb">Linda-a-Velha</span></a></li><li><a href="consultorios.html#loures">Loures</a></li>
+          </ul>
+        </li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -103,116 +118,47 @@
       <h1>O cuidado e saber de quem também os ama.</h1>
       <p class="lead">Somos o Grupo do meu melhor amigo: consultórios veterinários onde cada animal é tratado como o melhor amigo de alguém.</p>
       <div class="btn-row">
-        <a class="btn btn-teal" href="#clinicas">Conheça os consultórios</a>
-        <a class="btn btn-line" href="#quem-somos">Quem somos</a>
+        <a class="btn btn-teal" href="consultorios.html">Conheça os consultórios</a>
+        <a class="btn btn-line" href="sobre.html">Sobre o Grupo</a>
       </div>
     </div>
   </section>
 
   <section class="section on-light" id="quem-somos">
-    <div class="wrap about">
+    <div class="wrap intro">
+      <h2>Um veterinário de família para o seu melhor amigo</h2>
       <div>
-        <h2>Um veterinário de família para o seu melhor amigo</h2>
-        <div class="text">
-          <p>Não acreditamos no veterinário distante, de bata branca e poucas palavras. Queremos estar perto do animal e de quem cuida dele, criar uma relação de confiança e responder sem pressa a qualquer dúvida. Essa proximidade ajuda o tratamento e traz mais tranquilidade a quem espera.</p>
-          <p>O consultório de Pinhal Novo abriu a 1 de novembro de 2016, sob a gestão do médico veterinário Miguel Pinto. Hoje o Grupo reúne três unidades e mantém a mesma forma de trabalhar.</p>
-          <p>O nosso símbolo junta um cão, um gato e uma ave dentro de uma cruz de saúde, porque um melhor amigo tem muitas formas e muitas raças.</p>
-        </div>
+        <p>Não acreditamos no veterinário distante, de bata branca e poucas palavras. Queremos estar perto do animal e de quem cuida dele, criar uma relação de confiança e responder sem pressa a qualquer dúvida. Essa proximidade ajuda o tratamento e traz mais tranquilidade a quem espera.</p>
+        <div class="btn-row"><a class="btn btn-navy" href="sobre.html">Conheça o Grupo</a></div>
       </div>
-      <ul class="pillars">
-        <li>
-          <h3>Proximidade</h3>
-          <p>Conhecemos o animal e o tutor pelo nome e falamos sem formalismos.</p>
-        </li>
-        <li>
-          <h3>Confiança</h3>
-          <p>Explicamos o que se passa e o que vamos fazer, para decidirmos juntos.</p>
-        </li>
-        <li>
-          <h3>Cuidado</h3>
-          <p>Cada animal recebe o tempo e a atenção de que precisa.</p>
-        </li>
-      </ul>
     </div>
   </section>
 
-  <section class="section tint on-light" id="clinicas">
+  <section class="section tint on-light" id="consultorios">
     <div class="wrap">
-      <h2>Os nossos consultórios</h2>
+      <h2>Onde estamos</h2>
       <p class="clinics-intro">Três unidades, o mesmo cuidado. Escolha a mais perto de si.</p>
-
-      <div class="clinics">
-
-        <article class="clinic primary on-navy">
-          <div>
-            <h3>O Médico Veterinário do Meu Melhor Amigo, Pinhal Novo</h3>
-            <p class="since">Aberta a 1 de novembro de 2016</p>
-            <div class="btn-row">
-              <a class="btn btn-teal" href="pinhal-novo.html">Ver o consultório</a>
-              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+dos+Ferrovi%C3%A1rios+103+Pinhal+Novo" target="_blank" rel="noopener">Como chegar</a>
-            </div>
-          </div>
-          <dl class="facts">
-            <div><dt>Morada</dt><dd>Avenida dos Ferroviários 103, loja<br>2955-409 Pinhal Novo</dd></div>
-            <div><dt>Telefone</dt><dd><a href="tel:+351212362002">212 362 002</a></dd></div>
-            <div><dt>Horário</dt><dd>Segunda a sexta, 10h–13h e 15h–20h<br>Sábado, 10h–13h<br>Domingo, encerrado</dd></div>
-          </dl>
-        </article>
-
-        <div class="clinics-row">
-        <article class="clinic secondary">
-          <div>
-            <h3>Centro Veterinário <span class="nb">Linda-a-Velha</span></h3>
-            <p class="since">A unidade mais recente do Grupo</p>
-            <div class="btn-row">
-              <a class="btn btn-navy" href="https://centroveterinariolindaavelha.pt" target="_blank" rel="noopener">Visitar o site</a>
-              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Centro+Veterin%C3%A1rio+Linda-a-Velha" target="_blank" rel="noopener">Como chegar</a>
-            </div>
-          </div>
-          <dl class="facts">
-            <div><dt>Morada</dt><dd>Avenida 25 de Abril de 1974<br>Linda-a-Velha</dd></div>
-            <div><dt>Telefone</dt><dd><a href="tel:+351910730466">910 730 466</a><br><a href="tel:+351211317189">211 317 189</a></dd></div>
-            <div><dt>Horário</dt><dd>Segunda a sexta, 10h–19h<br>Sábado, 10h–14h<br>Domingo e feriados, encerrado</dd></div>
-          </dl>
-        </article>
-
-        <article class="clinic secondary">
-          <div>
-            <h3>Consultório Veterinário de <span class="nb">Loures</span></h3>
-            <p class="since">Unidade do Grupo em Loures</p>
-            <div class="btn-row">
-              <a class="btn btn-navy" href="tel:+351218065171">Ligar 218 065 171</a>
-              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Consult%C3%B3rio+Veterin%C3%A1rio+de+Loures" target="_blank" rel="noopener">Como chegar</a>
-            </div>
-          </div>
-          <dl class="facts">
-            <div><dt>Morada</dt><dd>Rua Francisco José Purificação Chaves&nbsp;2<br>2670-345 Loures</dd></div>
-            <div><dt>Telefone</dt><dd><a href="tel:+351218065171">218 065 171</a></dd></div>
-            <div><dt>Horário</dt><dd>Segunda a sábado, 9h30–13h e 15h–19h30<br>Domingo, encerrado</dd></div>
-          </dl>
-        </article>
-        </div>
-
+      <div class="tiles">
+        <a class="tile" href="consultorios.html?regiao=lisboa">
+          <span class="tile-n">2</span>
+          <span class="tile-l">unidades</span>
+          <span class="tile-r">Lisboa</span>
+          <span class="tile-u"><span class="nb">Linda-a-Velha</span> · Loures</span>
+        </a>
+        <a class="tile" href="consultorios.html?regiao=setubal">
+          <span class="tile-n">1</span>
+          <span class="tile-l">unidade</span>
+          <span class="tile-r">Setúbal</span>
+          <span class="tile-u">Pinhal Novo</span>
+        </a>
       </div>
-    </div>
-  </section>
-
-  <section class="section on-light" id="trabalhe-connosco">
-    <div class="wrap join">
-      <h2>Quer trabalhar connosco?</h2>
-      <div>
-        <p>Procuramos pessoas que gostem de animais e de os tratar com proximidade. Envie-nos a sua apresentação e um contacto.</p>
-        <p id="join-fallback">Fale com um dos nossos consultórios pelo telefone.</p>
-        <div class="btn-row" id="join-cta" hidden>
-          <a class="btn btn-navy" id="join-link" href="#">Enviar candidatura</a>
-        </div>
-      </div>
+      <div class="btn-row"><a class="btn btn-navy" href="consultorios.html">Ver todos os consultórios</a></div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer on-navy">
+<footer class="site-footer on-navy" id="contactos">
   <div class="wrap">
     <div class="foot">
       <div>
@@ -225,7 +171,7 @@
         <p><a href="tel:+351212362002">212 362 002</a></p>
       </div>
       <div>
-        <h3>Linda-a-Velha</h3>
+        <h3><span class="nb">Linda-a-Velha</span></h3>
         <p>Avenida 25 de Abril de 1974<br>Linda-a-Velha</p>
         <p><a href="tel:+351910730466">910 730 466</a> · <a href="tel:+351211317189">211 317 189</a></p>
       </div>
@@ -237,20 +183,26 @@
     </div>
     <div class="legal">
       <p>© <span id="ano">2026</span> Grupo do meu melhor amigo</p>
-      <p><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></p>
+      <p><a href="consultorios.html">Consultórios</a> · <a href="sobre.html#trabalhe-connosco">Trabalhe connosco</a> · <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></p>
     </div>
   </div>
 </footer>
 
 <script>
-  // E-mail do Grupo para candidaturas. Enquanto estiver vazio, o botão fica escondido.
-  var EMAIL_GRUPO = "";
   document.getElementById("ano").textContent = new Date().getFullYear();
-  if (EMAIL_GRUPO) {
-    document.getElementById("join-link").href = "mailto:" + EMAIL_GRUPO;
-    document.getElementById("join-cta").hidden = false;
-    document.getElementById("join-fallback").hidden = true;
-  }
+  (function () {
+    var btn = document.querySelector(".menu-toggle"), nav = document.getElementById("menu");
+    if (!btn || !nav) return;
+    btn.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    nav.addEventListener("click", function (e) {
+      if (e.target.tagName === "A" && nav.classList.contains("open")) {
+        nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  })();
 </script>
 </body>
 </html>

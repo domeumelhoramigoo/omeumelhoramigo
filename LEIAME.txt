@@ -1,17 +1,26 @@
 SITE DO GRUPO DO MEU MELHOR AMIGO - versão com todos os ficheiros na mesma pasta
 
-Ficheiros: index.html (Grupo), pinhal-novo.html (consultório de Pinhal Novo), style.css e as imagens.
-Enviar todos para a raiz do repositório. Não é preciso criar pastas.
+Páginas
+  index.html         página inicial (topo, "Um veterinário de família", mosaicos "Onde estamos")
+  sobre.html         Quem somos, Missão e valores, Trabalhe connosco
+  consultorios.html  todos os consultórios, com filtro por localidade
+  pinhal-novo.html   página do consultório de Pinhal Novo
+  style.css, imagens e a fonte Montserrat (montserrat-latin-wght-normal.woff2)
+Enviar todos os ficheiros para a raiz do repositório. Não é preciso criar pastas.
 
-Unidades no site: Pinhal Novo, Linda-a-Velha e Loures.
+Menu com abas: Sobre (Quem somos, Missão e valores, Trabalhe connosco), Consultórios (todos e cada unidade) e Contactos (rodapé).
+
+Unidades: Pinhal Novo (Setúbal), Linda-a-Velha e Loures (Lisboa).
+Quando abrir outra unidade, pedir a atualização: entra no menu, nos mosaicos "Onde estamos" (com a contagem por localidade), no filtro e nos cartões da página de consultórios, e no rodapé.
 
 Por confirmar antes de publicar
   1. Horários de Pinhal Novo e de Loures: copiados do Google em 21/09/2026; confirmar que estão certos
-  2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de index.html
-  3. Salas de recobro para cães (vem de uma notícia de 2019)
-  4. Texto sobre Miguel Pinto e abertura em 2016 (vem de artigos públicos)
-  5. Endereço domeumelhoramigo.com nas etiquetas de partilha, se o site ficar noutro endereço
+  2. E-mail do Grupo para candidaturas: preencher EMAIL_GRUPO no fim de sobre.html (enquanto vazio, o botão fica escondido)
+  3. Texto de "Missão e valores" (sobre.html): proposta minha, para aprovar
+  4. Salas de recobro para cães (pinhal-novo.html; vem de uma notícia de 2019)
+  5. Texto sobre Miguel Pinto e abertura em 2016 (vem de artigos públicos)
+  6. Endereço domeumelhoramigo.com nas etiquetas de partilha, se o site ficar noutro endereço
 
 Notas
-  - A fonte Montserrat está dentro do site (montserrat-latin-wght-normal.woff2); já não se pede nada aos servidores da Google. Licença: Montserrat-LICENCA-OFL.txt (manter no site).
+  - A fonte Montserrat está dentro do site; já não se pede nada aos servidores da Google. Licença: Montserrat-LICENCA-OFL.txt (manter no site).
   - Faixa de campanha no topo de index.html: texto de exemplo, editar ou apagar o bloco marcado com "FAIXA DE CAMPANHA".
