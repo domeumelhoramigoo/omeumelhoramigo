@@ -3,36 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>O Médico Veterinário do Meu Melhor Amigo | Clínica veterinária em Pinhal Novo</title>
-<meta name="description" content="Clínica veterinária em Pinhal Novo, na Avenida dos Ferroviários 103. Consultórios, laboratório próprio, sala de cirurgia e internamento. Telefone 212 362 002.">
+<title>Grupo do meu melhor amigo | Clínicas veterinárias em Pinhal Novo e Linda-a-Velha</title>
+<meta name="description" content="Grupo de clínicas veterinárias com unidades em Pinhal Novo e Linda-a-Velha. O cuidado e saber de quem também os ama.">
 <meta name="theme-color" content="#002845">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_PT">
-<meta property="og:title" content="O Médico Veterinário do Meu Melhor Amigo, Pinhal Novo">
-<meta property="og:description" content="Clínica veterinária em Pinhal Novo. O cuidado e saber de quem também os ama.">
-<meta property="og:image" content="https://domeumelhoramigo.com/assets/og.png">
+<meta property="og:title" content="Grupo do meu melhor amigo">
+<meta property="og:description" content="Clínicas veterinárias em Pinhal Novo e Linda-a-Velha. O cuidado e saber de quem também os ama.">
+<meta property="og:image" content="https://domeumelhoramigo.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "VeterinaryCare",
-  "name": "O Médico Veterinário do Meu Melhor Amigo - Pinhal Novo",
-  "url": "https://domeumelhoramigo.com/pinhal-novo/",
-  "telephone": "+351212362002",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avenida dos Ferroviários 103, loja",
-    "postalCode": "2955-409",
-    "addressLocality": "Pinhal Novo",
-    "addressCountry": "PT"
-  },
-  "sameAs": ["https://www.facebook.com/omedicoveterinariodomeumelhoramigopinhalnovo/"]
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domeumelhoramigo.com/#grupo",
+      "name": "Grupo do meu melhor amigo",
+      "url": "https://domeumelhoramigo.com/",
+      "logo": "https://domeumelhoramigo.com/logo-claro.png"
+    },
+    {
+      "@type": "VeterinaryCare",
+      "name": "O Médico Veterinário do Meu Melhor Amigo - Pinhal Novo",
+      "parentOrganization": { "@id": "https://domeumelhoramigo.com/#grupo" },
+      "url": "https://domeumelhoramigo.com/pinhal-novo.html",
+      "telephone": "+351212362002",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida dos Ferroviários 103, loja",
+        "postalCode": "2955-409",
+        "addressLocality": "Pinhal Novo",
+        "addressCountry": "PT"
+      },
+      "sameAs": ["https://www.facebook.com/omedicoveterinariodomeumelhoramigopinhalnovo/"]
+    },
+    {
+      "@type": "VeterinaryCare",
+      "name": "Centro Veterinário Linda-a-Velha",
+      "parentOrganization": { "@id": "https://domeumelhoramigo.com/#grupo" },
+      "url": "https://centroveterinariolindaavelha.pt",
+      "telephone": "+351910730466",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida 25 de Abril de 1974",
+        "addressLocality": "Linda-a-Velha",
+        "addressCountry": "PT"
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -41,79 +66,108 @@
 
 <header class="site-header on-navy">
   <div class="wrap">
-    <a class="brand" href="../" aria-label="Grupo do meu melhor amigo, página inicial">
-      <img src="../assets/logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
+    <a class="brand" href="./" aria-label="Grupo do meu melhor amigo, página inicial">
+      <img src="logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="../#quem-somos">Quem somos</a>
-      <a href="../#clinicas" aria-current="page">Clínicas</a>
-      <a href="../#trabalhe-connosco">Trabalhe connosco</a>
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#clinicas">Clínicas</a>
+      <a href="#trabalhe-connosco">Trabalhe connosco</a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
 
-  <section class="hero hero-page on-navy">
+  <section class="hero on-navy">
     <div class="wrap hero-inner">
-      <a class="back" href="../#clinicas">Voltar ao Grupo</a>
-      <h1>O Médico Veterinário do Meu Melhor Amigo, em Pinhal Novo</h1>
-      <p class="lead">Abrimos a 1 de novembro de 2016 e queremos ser o veterinário de família do seu animal: perto, informal e sempre disponível para uma dúvida.</p>
+      <h1>O cuidado e saber de quem também os ama.</h1>
+      <p class="lead">Somos o Grupo do meu melhor amigo: clínicas veterinárias onde cada animal é tratado como o melhor amigo de alguém.</p>
       <div class="btn-row">
-        <a class="btn btn-teal" href="tel:+351212362002">Ligar 212 362 002</a>
-        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+dos+Ferrovi%C3%A1rios+103+Pinhal+Novo" target="_blank" rel="noopener">Como chegar</a>
+        <a class="btn btn-teal" href="#clinicas">Conheça as clínicas</a>
+        <a class="btn btn-line" href="#quem-somos">Quem somos</a>
       </div>
     </div>
   </section>
 
-  <section class="section on-light">
-    <div class="wrap">
-      <h2>Instalações para cuidar de perto</h2>
-      <ul class="rooms">
+  <section class="section on-light" id="quem-somos">
+    <div class="wrap about">
+      <div>
+        <h2>Um veterinário de família para o seu melhor amigo</h2>
+        <div class="text">
+          <p>Não acreditamos no veterinário distante, de bata branca e poucas palavras. Queremos estar perto do animal e de quem cuida dele, criar uma relação de confiança e responder sem pressa a qualquer dúvida. Essa proximidade ajuda o tratamento e traz mais tranquilidade a quem espera.</p>
+          <p>A clínica de Pinhal Novo abriu a 1 de novembro de 2016, sob a gestão do médico veterinário Miguel Pinto. Hoje o Grupo reúne duas clínicas e mantém a mesma forma de trabalhar.</p>
+          <p>O nosso símbolo junta um cão, um gato e uma ave dentro de uma cruz de saúde, porque um melhor amigo tem muitas formas e muitas raças.</p>
+        </div>
+      </div>
+      <ul class="pillars">
         <li>
-          <h3>Consultórios</h3>
-          <p>Espaços onde o animal e o tutor são recebidos com calma.</p>
+          <h3>Proximidade</h3>
+          <p>Conhecemos o animal e o tutor pelo nome e falamos sem formalismos.</p>
         </li>
         <li>
-          <h3>Laboratório próprio</h3>
-          <p>Aparelho de hemograma, aparelho de análises bioquímicas e microscópio.</p>
+          <h3>Confiança</h3>
+          <p>Explicamos o que se passa e o que vamos fazer, para decidirmos juntos.</p>
         </li>
         <li>
-          <h3>Sala de cirurgia</h3>
-          <p>Para as intervenções que o seu animal possa precisar.</p>
-        </li>
-        <li>
-          <h3>Sala de tratamento</h3>
-          <p>Para tratamentos e cuidados do dia a dia.</p>
-        </li>
-        <li>
-          <h3>Internamento</h3>
-          <p>Vigilância para os animais que precisam de ficar connosco.</p>
-        </li>
-        <li>
-          <h3>Salas de recobro para cães</h3>
-          <p>Um espaço tranquilo para a recuperação depois de uma intervenção.</p>
+          <h3>Cuidado</h3>
+          <p>Cada animal recebe o tempo e a atenção de que precisa.</p>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="section tint on-light">
-    <div class="wrap find">
-      <div>
-        <h2>Como nos encontrar</h2>
-        <dl class="facts">
-          <div><dt>Morada</dt><dd>Avenida dos Ferroviários 103, loja<br>2955-409 Pinhal Novo</dd></div>
-          <div><dt>Telefone</dt><dd><a href="tel:+351212362002">212 362 002</a></dd></div>
-          <div><dt>Horário</dt><dd><span class="todo">horário a confirmar</span></dd></div>
-          <div><dt>Redes</dt><dd><a href="https://www.facebook.com/omedicoveterinariodomeumelhoramigopinhalnovo/" target="_blank" rel="noopener">Facebook</a></dd></div>
-        </dl>
+  <section class="section tint on-light" id="clinicas">
+    <div class="wrap">
+      <h2>As nossas clínicas</h2>
+      <p class="clinics-intro">Duas unidades, o mesmo cuidado. Escolha a mais perto de si.</p>
+
+      <div class="clinics">
+
+        <article class="clinic primary on-navy">
+          <div>
+            <h3>O Médico Veterinário do Meu Melhor Amigo, Pinhal Novo</h3>
+            <p class="since">Aberta a 1 de novembro de 2016</p>
+            <div class="btn-row">
+              <a class="btn btn-teal" href="pinhal-novo.html">Ver a clínica</a>
+              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+dos+Ferrovi%C3%A1rios+103+Pinhal+Novo" target="_blank" rel="noopener">Como chegar</a>
+            </div>
+          </div>
+          <dl class="facts">
+            <div><dt>Morada</dt><dd>Avenida dos Ferroviários 103, loja<br>2955-409 Pinhal Novo</dd></div>
+            <div><dt>Telefone</dt><dd><a href="tel:+351212362002">212 362 002</a></dd></div>
+            <div><dt>Horário</dt><dd><span class="todo">horário a confirmar</span></dd></div>
+          </dl>
+        </article>
+
+        <article class="clinic secondary">
+          <div>
+            <h3>Centro Veterinário <span class="nb">Linda-a-Velha</span></h3>
+            <p class="since">A unidade mais recente do Grupo</p>
+            <div class="btn-row">
+              <a class="btn btn-navy" href="https://centroveterinariolindaavelha.pt" target="_blank" rel="noopener">Visitar o site</a>
+              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Centro+Veterin%C3%A1rio+Linda-a-Velha" target="_blank" rel="noopener">Como chegar</a>
+            </div>
+          </div>
+          <dl class="facts">
+            <div><dt>Morada</dt><dd>Avenida 25 de Abril de 1974<br>Linda-a-Velha</dd></div>
+            <div><dt>Telefone</dt><dd><a href="tel:+351910730466">910 730 466</a><br><a href="tel:+351211317189">211 317 189</a></dd></div>
+            <div><dt>Horário</dt><dd>Segunda a sexta, 10h–19h<br>Sábado, 10h–14h<br>Domingo e feriados, encerrado</dd></div>
+          </dl>
+        </article>
+
       </div>
+    </div>
+  </section>
+
+  <section class="section on-light" id="trabalhe-connosco">
+    <div class="wrap join">
+      <h2>Quer trabalhar connosco?</h2>
       <div>
-        <p>A clínica é gerida desde a abertura pelo médico veterinário Miguel Pinto e faz parte do Grupo do meu melhor amigo, juntamente com o Centro Veterinário Linda-a-Velha.</p>
-        <div class="btn-row">
-          <a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+dos+Ferrovi%C3%A1rios+103+Pinhal+Novo" target="_blank" rel="noopener">Abrir no Google Maps</a>
-          <a class="btn btn-line" href="https://centroveterinariolindaavelha.pt" target="_blank" rel="noopener">Conhecer Linda-a-Velha</a>
+        <p>Procuramos pessoas que gostem de animais e de os tratar com proximidade. Envie-nos a sua apresentação e um contacto.</p>
+        <p id="join-fallback">Fale com uma das nossas clínicas pelo telefone.</p>
+        <div class="btn-row" id="join-cta" hidden>
+          <a class="btn btn-navy" id="join-link" href="#">Enviar candidatura</a>
         </div>
       </div>
     </div>
@@ -125,7 +179,7 @@
   <div class="wrap">
     <div class="foot">
       <div>
-        <img src="../assets/logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
+        <img src="logo-escuro.png" alt="Grupo do meu melhor amigo" width="236" height="38">
         <p>O cuidado e saber de quem também os ama.</p>
       </div>
       <div>
@@ -146,6 +200,15 @@
   </div>
 </footer>
 
-<script>document.getElementById("ano").textContent = new Date().getFullYear();</script>
+<script>
+  // E-mail do Grupo para candidaturas. Enquanto estiver vazio, o botão fica escondido.
+  var EMAIL_GRUPO = "";
+  document.getElementById("ano").textContent = new Date().getFullYear();
+  if (EMAIL_GRUPO) {
+    document.getElementById("join-link").href = "mailto:" + EMAIL_GRUPO;
+    document.getElementById("join-cta").hidden = false;
+    document.getElementById("join-fallback").hidden = true;
+  }
+</script>
 </body>
 </html>
