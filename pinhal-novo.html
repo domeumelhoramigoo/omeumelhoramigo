@@ -159,7 +159,7 @@
           <pre id="pedido-txt"></pre>
           <div class="btn-row">
             <a class="btn btn-navy" id="via-wa" href="#" target="_blank" rel="noopener" hidden>Enviar por WhatsApp</a>
-            <a class="btn btn-navy" id="via-mail" href="#" hidden>Enviar por e-mail</a>
+            <button class="btn btn-navy" id="via-mail" type="button" hidden>Enviar pedido</button>
             <button class="btn btn-line" type="button" id="copiar">Copiar o texto</button>
             <a class="btn btn-line" href="tel:+351212362002">Ligar 212 362 002</a>
           </div>
@@ -264,7 +264,7 @@
   var WHATSAPP_PN = "351934562580";
   var EMAIL_PN = "omedicoveterinariopinhalnovo@domeumelhoramigo.com";
   (function () {
-    var form = document.getElementById("form-marcacao");
+    var form = document.getElementById("form-marcacao"), ultimo = null;
     if (!form) return;
     var dia = document.getElementById("dia"), erro = document.getElementById("erro");
     var pedido = document.getElementById("pedido"), txt = document.getElementById("pedido-txt");
@@ -301,10 +301,29 @@
 
       var wa = document.getElementById("via-wa"), ml = document.getElementById("via-mail");
       if (WHATSAPP_PN) { wa.href = "https://wa.me/" + WHATSAPP_PN + "?text=" + encodeURIComponent(msg); wa.hidden = false; }
-      if (EMAIL_PN) { ml.href = "mailto:" + EMAIL_PN + "?subject=" + encodeURIComponent("Pedido de marcação") + "&body=" + encodeURIComponent(msg); ml.hidden = false; }
+      if (EMAIL_PN) { ml.hidden = false; ml.disabled = false; ml.textContent = "Enviar pedido"; ultimo = { f: f, msg: msg }; }
       if (WHATSAPP_PN || EMAIL_PN) document.getElementById("pedido-nota").textContent = "Só fica marcado quando o consultório lhe responder.";
 
       form.hidden = true; pedido.hidden = false; pedido.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    document.getElementById("via-mail").addEventListener("click", function () {
+      var b = this, nota = document.getElementById("pedido-nota");
+      if (!ultimo) return;
+      b.disabled = true; b.textContent = "A enviar...";
+      var f = ultimo.f;
+      fetch("https://formsubmit.co/ajax/" + EMAIL_PN, {
+        method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({ _subject: "Pedido de marcação - " + f.get("nome"), _template: "table", _captcha: "false",
+          Nome: f.get("nome"), "Telemóvel": f.get("tel"), Animal: f.get("animal") + " (" + f.get("especie") + ")",
+          Motivo: f.get("motivo"), "Dia preferido": f.get("dia").split("-").reverse().join("/") + ", " + f.get("periodo"), Nota: (f.get("obs") || "").trim() || "-" })
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        if (j && (j.success === true || j.success === "true")) { b.textContent = "Pedido enviado ✓"; nota.textContent = "Recebemos o seu pedido. Vamos contactá-lo para confirmar a marcação."; }
+        else throw 0;
+      }).catch(function () {
+        b.disabled = false; b.textContent = "Enviar pedido";
+        nota.textContent = "Não foi possível enviar agora. Tente por WhatsApp ou ligue 212 362 002.";
+      });
     });
 
     document.getElementById("editar").addEventListener("click", function () { pedido.hidden = true; form.hidden = false; });
