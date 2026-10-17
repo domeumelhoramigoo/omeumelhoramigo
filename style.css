@@ -495,3 +495,17 @@ button.btn { font-family: inherit; font-size: 0.98rem; font-weight: 700; }
 .review footer { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
 .review footer span { display: block; font-weight: 500; color: #5a6a74; }
 
+
+/* ---------- Missão e valores ---------- */
+.mission { position: relative; overflow: hidden; margin-top: 2rem; background: var(--navy); color: var(--white); border-radius: var(--radius-lg); padding: clamp(1.8rem, 4vw, 3rem); }
+.mission::after { content: ""; position: absolute; right: -40px; bottom: -60px; width: 260px; aspect-ratio: 1; background: url("simbolo-branco.png") center / contain no-repeat; opacity: 0.08; }
+.mission-k { position: relative; margin: 0 0 0.6rem; font-weight: 700; color: #7fd6db; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; }
+.mission-t { position: relative; margin: 0; font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 800; line-height: 1.3; max-width: 32ch; }
+.values { list-style: none; margin: 1.4rem 0 0; padding: 0; display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.values li { background: var(--white); border-radius: var(--radius-md); padding: 1.5rem 1.4rem; border: 1px solid var(--line); transition: transform .2s, box-shadow .2s; }
+.values li:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0, 40, 69, 0.12); }
+.value-ico { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--mist); color: var(--teal); margin-bottom: 0.9rem; transition: background-color .2s, color .2s; }
+.values li:hover .value-ico { background: var(--teal); color: var(--white); }
+.value-ico svg { width: 24px; height: 24px; }
+.values h3 { margin: 0 0 0.4rem; font-size: 1.12rem; font-weight: 800; color: var(--navy); }
+.values p { margin: 0; color: #3a4a54; font-size: 0.97rem; }
