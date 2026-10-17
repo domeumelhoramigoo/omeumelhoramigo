@@ -509,3 +509,10 @@ button.btn { font-family: inherit; font-size: 0.98rem; font-weight: 700; }
 .value-ico svg { width: 24px; height: 24px; }
 .values h3 { margin: 0 0 0.4rem; font-size: 1.12rem; font-weight: 800; color: var(--navy); }
 .values p { margin: 0; color: #3a4a54; font-size: 0.97rem; }
+
+/* ---------- Redes sociais (topo das unidades) ---------- */
+.social { display: flex; align-items: center; gap: 0.7rem; margin-top: 1.6rem; }
+.social span { font-weight: 700; color: #7fd6db; font-size: 0.95rem; margin-right: 0.2rem; }
+.social a { display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 2px solid rgba(255,255,255,.55); color: var(--white); transition: background-color .15s, border-color .15s, transform .15s; }
+.social a:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-2px); }
+.social svg { width: 22px; height: 22px; }
