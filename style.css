@@ -422,3 +422,32 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .entities th, .entities td { text-align: left; vertical-align: top; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--line); }
 .entities th { background: var(--mist); color: var(--navy); font-weight: 800; }
 button.btn { font-family: inherit; font-size: 0.98rem; font-weight: 700; }
+
+/* ---------- Página inicial: fotos ---------- */
+.hero-home::after { display: none; }
+.hero-foto { margin: 0; }
+.hero-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (min-width: 900px) {
+  .hero-foto { position: absolute; inset: 0 0 0 auto; width: 46%; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 28%); mask-image: linear-gradient(90deg, transparent 0, #000 28%); }
+  .hero-home .hero-inner > * { max-width: 54%; }
+}
+@media (max-width: 899px) {
+  .hero-foto { height: 240px; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); mask-image: linear-gradient(180deg, #000 60%, transparent); }
+  .hero-home .hero-inner { padding-top: 1.2rem; }
+}
+.tile { overflow: hidden; }
+.tile-foto { display: block; width: calc(100% + 4rem); max-width: none; margin: -2rem -2rem 1.4rem; aspect-ratio: 16 / 9; object-fit: cover; }
+.amigos-grid { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, 1fr); margin-top: 2.2rem; }
+@media (min-width: 640px) { .amigos-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1000px) { .amigos-grid { grid-template-columns: repeat(6, 1fr); } }
+.amigos-grid figure { margin: 0; border-radius: var(--radius-md); overflow: hidden; position: relative; aspect-ratio: 1; }
+.amigos-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.amigos-grid figure:hover img { transform: scale(1.06); }
+.amigos-grid figcaption { position: absolute; left: 0.6rem; bottom: 0.6rem; background: rgba(0,40,69,.85); color: #fff; font-size: 0.82rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 999px; }
+.reviews { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 2.2rem; }
+.review { margin: 0; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--teal); border-radius: var(--radius-md); padding: 1.5rem 1.4rem 1.3rem; display: flex; flex-direction: column; }
+.review::before { content: "\201C"; font-size: 3.2rem; line-height: 0.6; color: var(--teal); font-weight: 800; height: 1.4rem; }
+.review p { margin: 0 0 1rem; color: #2a3a44; flex: 1; }
+.review footer { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+.review footer span { display: block; font-weight: 500; color: #5a6a74; }
+
