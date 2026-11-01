@@ -556,3 +556,23 @@ body:not(.theme-ev) .hero-page:has(.social) { background: radial-gradient(55% 13
 body:not(.theme-ev) .hero-page:has(.social)::before { content: ""; position: absolute; right: -9%; top: 50%; width: min(78vw, 760px); aspect-ratio: 1; transform: translateY(-50%); border-radius: 50%; background: repeating-radial-gradient(circle, transparent 0 52px, rgba(255, 255, 255, 0.075) 52px 54px); -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 70%); mask-image: radial-gradient(circle, #000 18%, transparent 70%); pointer-events: none; }
 body:not(.theme-ev) .hero-page:has(.social)::after { right: 6%; bottom: auto; top: 50%; width: min(30vw, 330px); transform: translateY(-50%); opacity: 0.11; }
 @media (max-width: 859px) { body:not(.theme-ev) .hero-page:has(.social)::after { right: -4%; width: 46vw; } }
+
+/* ---------- Cabeçalho fixo e botão "Encontrar consultório" ---------- */
+html { scroll-padding-top: 84px; }
+.site-header { position: sticky; top: 0; z-index: 50; transition: box-shadow .25s ease; }
+.site-header::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--teal) 18%, var(--teal) 82%, transparent); opacity: .55; transition: opacity .25s ease; pointer-events: none; }
+.site-header.is-scrolled::before { opacity: 1; }
+.site-header.is-scrolled { box-shadow: 0 10px 30px rgba(0, 12, 28, 0.35); }
+.site-header .wrap { transition: padding .25s ease; }
+.site-header.is-scrolled .wrap { padding-block: 0.6rem; }
+.brand img { transition: height .25s ease; }
+.site-header.is-scrolled .brand img { height: 30px; }
+.nav .nav-cta a { display: inline-flex; align-items: center; gap: .45rem; background: var(--teal-deep); color: var(--white); padding: .62rem 1.2rem; border-radius: 999px; border: 1px solid rgba(127, 214, 219, 0.5); border-bottom-width: 1px; font-weight: 700; font-size: .92rem; transition: background-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.nav .nav-cta a::after { content: "→"; transition: transform .2s ease; }
+.nav .nav-cta a:hover, .nav .nav-cta a:focus-visible { background: #7fd6db; color: var(--navy); border-color: #7fd6db; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0, 148, 156, 0.4); }
+.nav .nav-cta a:hover::after { transform: translateX(3px); }
+@media (max-width: 859px) {
+  .menu > li.nav-cta { border-top: 0; padding-top: .9rem; }
+  .nav.open { max-height: calc(100vh - 76px); overflow-y: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .site-header, .site-header::before, .site-header .wrap, .brand img, .nav .nav-cta a, .nav .nav-cta a::after { transition: none; } }
