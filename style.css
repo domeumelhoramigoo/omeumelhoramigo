@@ -550,3 +550,9 @@ button.btn { font-family: inherit; font-size: 0.98rem; font-weight: 700; }
 @media (min-width: 860px) and (prefers-reduced-motion: reduce) {
   .site-header .submenu, .site-header .submenu li, .site-header .submenu a, .site-header::after { transition: none; }
 }
+
+/* ---------- Topo das unidades (Pinhal Novo e Loures): degradé da marca e anéis ---------- */
+body:not(.theme-ev) .hero-page:has(.social) { background: radial-gradient(55% 130% at 94% 12%, rgba(0, 148, 156, 0.42) 0%, rgba(0, 148, 156, 0) 68%), radial-gradient(42% 90% at 58% 125%, rgba(0, 148, 156, 0.22) 0%, rgba(0, 148, 156, 0) 70%), linear-gradient(120deg, var(--navy) 0%, var(--navy) 38%, color-mix(in srgb, var(--navy) 82%, var(--teal)) 100%); }
+body:not(.theme-ev) .hero-page:has(.social)::before { content: ""; position: absolute; right: -9%; top: 50%; width: min(78vw, 760px); aspect-ratio: 1; transform: translateY(-50%); border-radius: 50%; background: repeating-radial-gradient(circle, transparent 0 52px, rgba(255, 255, 255, 0.075) 52px 54px); -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 70%); mask-image: radial-gradient(circle, #000 18%, transparent 70%); pointer-events: none; }
+body:not(.theme-ev) .hero-page:has(.social)::after { right: 6%; bottom: auto; top: 50%; width: min(30vw, 330px); transform: translateY(-50%); opacity: 0.11; }
+@media (max-width: 859px) { body:not(.theme-ev) .hero-page:has(.social)::after { right: -4%; width: 46vw; } }
