@@ -516,3 +516,37 @@ button.btn { font-family: inherit; font-size: 0.98rem; font-weight: 700; }
 .social a { display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 2px solid rgba(255,255,255,.55); color: var(--white); transition: background-color .15s, border-color .15s, transform .15s; }
 .social a:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-2px); }
 .social svg { width: 22px; height: 22px; }
+
+/* ---------- Menu elegante (painel escuro, só em ecrãs grandes) ---------- */
+@media (min-width: 860px) {
+  .site-header::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 100vh; background: rgba(0, 18, 35, 0.55); opacity: 0; pointer-events: none; transition: opacity .3s ease; z-index: -1; }
+  .site-header:has(.has-sub:hover)::after, .site-header:has(.has-sub:focus-within)::after { opacity: 1; }
+  .has-sub > a::after { transition: transform .25s ease; }
+  .has-sub:hover > a::after, .has-sub:focus-within > a::after { transform: translateY(-0.02em) rotate(225deg); }
+  .site-header .submenu { left: 50%; right: auto; min-width: 340px; padding: 1.7rem 1.9rem 1.3rem; border-radius: 22px; background: rgba(0, 36, 63, 0.98); color: var(--white); border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 34px 80px rgba(0, 8, 20, 0.55); transform: translate(-50%, 18px); transition: opacity .3s ease, transform .35s cubic-bezier(.2, .8, .2, 1), visibility .3s; }
+  .site-header .has-sub:hover .submenu, .site-header .has-sub:focus-within .submenu { transform: translate(-50%, 12px); }
+  .site-header .submenu::before { content: ""; position: absolute; top: 0; left: 1.9rem; right: auto; width: 46px; height: 3px; background: var(--teal); border-radius: 0 0 3px 3px; transform: none; }
+  .site-header .has-sub:has(a[href$="pinhal-novo.html"]) .submenu { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.6rem; row-gap: 0; min-width: 640px; left: auto; right: -1.4rem; transform: translateY(18px); }
+  .site-header .has-sub:has(a[href$="pinhal-novo.html"]):hover .submenu, .site-header .has-sub:has(a[href$="pinhal-novo.html"]):focus-within .submenu { transform: translateY(12px); }
+  .site-header .has-sub:has(a[href$="pinhal-novo.html"]) .submenu::before { left: 1.9rem; right: auto; }
+  .site-header .submenu li { opacity: 0; transform: translateY(10px); transition: opacity .4s ease, transform .4s cubic-bezier(.2, .8, .2, 1); }
+  .site-header .has-sub:hover .submenu li, .site-header .has-sub:focus-within .submenu li { opacity: 1; transform: none; }
+  .site-header .submenu li:nth-child(1) { transition-delay: .04s; }
+  .site-header .submenu li:nth-child(2) { transition-delay: .09s; }
+  .site-header .submenu li:nth-child(3) { transition-delay: .14s; }
+  .site-header .submenu li:nth-child(4) { transition-delay: .19s; }
+  .site-header .submenu li:nth-child(5) { transition-delay: .24s; }
+  .site-header .submenu a { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 1rem; padding: 1.05rem 0; border-radius: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: transparent; color: var(--white); font-size: 1.08rem; font-weight: 700; letter-spacing: -0.005em; transition: color .2s ease, padding .25s ease; }
+  .site-header .submenu a:hover, .site-header .submenu a:focus-visible { background: transparent; transform: none; color: #7fd6db; padding-left: 0.5rem; border-bottom-color: rgba(127, 214, 219, 0.45); }
+  .site-header .submenu a::after { grid-column: 1; grid-row: 2; color: rgba(255, 255, 255, 0.62); font-size: 0.8rem; font-weight: 500; opacity: 1; margin-top: 0.25rem; }
+  .site-header .submenu a[href]::before { content: "→"; display: block; grid-column: 2; grid-row: 1 / span 2; width: auto; height: auto; background: none !important; background-image: none !important; border-radius: 0; color: #7fd6db; font-size: 1.15rem; font-weight: 600; opacity: 0; transform: translateX(-10px); transition: opacity .25s ease, transform .25s ease; }
+  .site-header .submenu a[href]:hover::before, .site-header .submenu a[href]:focus-visible::before { opacity: 1; transform: none; background: none !important; background-image: none !important; }
+  .site-header .submenu a[href$="consultorios.html"] { grid-column: 1 / -1; display: flex; justify-content: flex-start; align-items: center; gap: 0.5rem; margin-top: 0.4rem; padding: 1.1rem 0 0.2rem; border-bottom: 0; background: transparent; color: #7fd6db; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .site-header .submenu a[href$="consultorios.html"]:hover { background: transparent; color: var(--white); padding-left: 0; }
+  .site-header .submenu a[href$="consultorios.html"]::before { display: none; }
+  .site-header .submenu a[href$="consultorios.html"]::after { content: "→"; display: inline-block; margin: 0; color: inherit; font-size: 1rem; transition: transform .25s ease; }
+  .site-header .submenu a[href$="consultorios.html"]:hover::after { transform: translateX(6px); }
+}
+@media (min-width: 860px) and (prefers-reduced-motion: reduce) {
+  .site-header .submenu, .site-header .submenu li, .site-header .submenu a, .site-header::after { transition: none; }
+}
