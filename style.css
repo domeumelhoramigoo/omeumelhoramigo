@@ -576,3 +576,13 @@ html { scroll-padding-top: 84px; }
   .nav.open { max-height: calc(100vh - 76px); overflow-y: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .site-header, .site-header::before, .site-header .wrap, .brand img, .nav .nav-cta a, .nav .nav-cta a::after { transition: none; } }
+
+/* ---------- Página inicial: mais cor (topo com degradé turquesa e faixa "melhores amigos") ---------- */
+body:not(.theme-ev) .hero:not(.hero-page) { background: radial-gradient(60% 120% at 92% 18%, rgba(0, 148, 156, 0.62) 0%, rgba(0, 148, 156, 0) 66%), radial-gradient(48% 90% at 55% 122%, rgba(0, 148, 156, 0.3) 0%, rgba(0, 148, 156, 0) 70%), linear-gradient(118deg, var(--navy) 0%, var(--navy) 34%, color-mix(in srgb, var(--navy) 70%, var(--teal)) 100%); }
+body:not(.theme-ev) .hero:not(.hero-page)::before { content: ""; position: absolute; right: -8%; top: 50%; width: min(80vw, 860px); aspect-ratio: 1; transform: translateY(-50%); border-radius: 50%; background: repeating-radial-gradient(circle, transparent 0 56px, rgba(255, 255, 255, 0.08) 56px 58px); -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 70%); mask-image: radial-gradient(circle, #000 18%, transparent 70%); pointer-events: none; }
+body:not(.theme-ev) .hero:not(.hero-page)::after { right: 8%; bottom: auto; top: 50%; width: min(36vw, 420px); transform: translateY(-50%); opacity: 0.12; }
+@media (max-width: 859px) { body:not(.theme-ev) .hero:not(.hero-page)::after { right: -6%; width: 52vw; } }
+#amigos { background: var(--teal); }
+#amigos h2 { color: var(--white); }
+#amigos .clinics-intro { color: var(--white); font-weight: 700; font-size: 1.25rem; }
+#amigos .amigos-grid figure { box-shadow: 0 14px 30px rgba(0, 40, 69, 0.28); }
