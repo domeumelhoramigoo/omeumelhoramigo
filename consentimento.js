@@ -1,3 +1,20 @@
+/* Cabeçalho do site: botão "Encontrar consultório" e efeito ao descer a página.
+ * Está aqui só porque este ficheiro já é carregado em todas as páginas. Não mexe em cookies nem em dados. */
+(function () {
+  function iniciar() {
+    var hd = document.querySelector(".site-header"), menu = document.querySelector(".site-header .menu");
+    if (!hd) return;
+    if (menu && !/consultorios\.html$/.test(location.pathname) && !menu.querySelector(".nav-cta")) {
+      var li = document.createElement("li"), a = document.createElement("a");
+      li.className = "nav-cta"; a.href = "consultorios.html"; a.textContent = "Encontrar consultório";
+      li.appendChild(a); menu.appendChild(li);
+    }
+    function atualizar() { hd.classList.toggle("is-scrolled", window.scrollY > 24); }
+    atualizar(); window.addEventListener("scroll", atualizar, { passive: true });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
+})();
+
 /* Gestor de consentimento de cookies com Google Analytics.
  *
  * Substituir "G-XXXXXXXXXX" pelo ID de medição do Google Analytics 4 deste site (começa por "G-").
