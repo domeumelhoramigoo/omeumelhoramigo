@@ -5,7 +5,7 @@
  * O Analytics só é carregado depois de a pessoa aceitar. Recusar é tão fácil como aceitar.
  */
 (function () {
-  var CONFIG = { ativo: true, analytics: "G-XXXXXXXXXX" };
+  var CONFIG = { ativo: true, analytics: "G-Q19VERG812" };
   if (!CONFIG.ativo || !/^G-[A-Z0-9]{6,}$/.test(CONFIG.analytics) || /^G-X+$/.test(CONFIG.analytics)) return;
 
   var KEY = "cookies-escolha", MESES = 6;
